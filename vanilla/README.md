@@ -1,4 +1,4 @@
-# Redux on Vanilla Js
+# Redux - Counter with Vanilla Js
 
     - <script src="https://unpkg.com/redux@latest/dist/redux.min.js"></script>
     - var store = Redux.createStore(counter)
