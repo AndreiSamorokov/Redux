@@ -4,4 +4,4 @@
     
 ## 2. Counter with React 
 
-## 3. Basic Todo with React -- working
+## 3. Basic Todo with React -- checking 
