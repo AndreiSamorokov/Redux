@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import shop from '../api/shop'
 
-
+import Product from './Product'
 
 function Products() {
 
@@ -16,7 +16,7 @@ function Products() {
           {( !products ) ? 
             <div> Loading </div> : <div>
             { products.map((product, key) => (
-              <div key={key}> test </div>
+              <Product key={key} title={product.title} inventory={product.inventory} price={product.price}/>
             ))}
             </div>
           }
