@@ -4,4 +4,6 @@
     
 ## 2. Counter with React 
 
-## 3. Basic Todo with React -- checking 
+## 3. Basic Todo with React
+
+## 4. Shooping cart without Redux -- working
