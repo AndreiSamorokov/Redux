@@ -11,12 +11,16 @@ function Products() {
         Setproducts( arr );
     })
 
+    const addStock = () => {
+      console.log('add stock');
+    }
+
     return (
       <div> 
           {( !products ) ? 
             <div> Loading </div> : <div>
             { products.map((product, key) => (
-              <Product key={key} title={product.title} inventory={product.inventory} price={product.price}/>
+              <Product key={key} title={product.title} inventory={product.inventory} price={product.price} addStock={addStock}/>
             ))}
             </div>
           }

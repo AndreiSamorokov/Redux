@@ -1,13 +1,13 @@
-function Product({title, price, inventory}) {
+function Product({title, price, inventory, addStock }) {
 
-    const addProduct = (e) =>{
-      console.log( 'add product ' + e); 
-    }
+    // const addStock = (e) =>{
+    //   console.log( 'add product ' + e); 
+    // }
 
     return (
       <div> 
           <div> {title} - {price} - {inventory} </div> 
-          <button onClick={addProduct}> Add to cart </button>
+          <button onClick={addStock}> Add to cart </button>
       </div>
     );
   }
