@@ -12,7 +12,6 @@ function Products() {
     })
 
     const addStock = (e) => {
-      console.log('add stock');
       console.log( e.target.value );
     }
 

@@ -1,6 +1,7 @@
 function Carts() {
   return (
     <div> 
+        <hr />
         Carts area
     </div>
   );
