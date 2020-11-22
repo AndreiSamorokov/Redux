@@ -11,8 +11,9 @@ function Products() {
         Setproducts( arr );
     })
 
-    const addStock = () => {
+    const addStock = (e) => {
       console.log('add stock');
+      console.log( e.target.value );
     }
 
     return (
@@ -20,7 +21,7 @@ function Products() {
           {( !products ) ? 
             <div> Loading </div> : <div>
             { products.map((product, key) => (
-              <Product key={key} title={product.title} inventory={product.inventory} price={product.price} addStock={addStock}/>
+              <Product key={key} id={product.id} title={product.title} inventory={product.inventory} price={product.price} addStock={addStock}/>
             ))}
             </div>
           }
