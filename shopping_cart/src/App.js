@@ -6,10 +6,15 @@ import Products from './componnents/Products'
 
 
 function App() {
+
+  const addStockonRoodComp = (e) => {
+    console.log( 'addStockonRoodComp' )
+    console.log( e.target.value );
+  }
   return (
     <div> 
         <h1> Shopping Cart </h1>
-        <Products />
+        <Products addStockRoot={addStockonRoodComp}/>
         <Carts />
     </div>
   );
