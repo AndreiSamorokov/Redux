@@ -1,15 +1,8 @@
-import React, { useState, useEffect } from "react";
-import shop from '../api/shop'
 
 import Product from './Product'
 
-function Products( {addStockRoot} ) {
+function Products( {products, addStockRoot} ) {
 
-    const [products, Setproducts] = useState([]);
-    useEffect(() => {  
-        const arr = shop.getProducts() 
-        Setproducts( arr );
-    })
 
 
     return (
