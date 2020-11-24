@@ -9,16 +9,23 @@ import Products from './componnents/Products'
 
 function App() {
 
-  const [products, Setproducts] = useState([]);
+  const [products, setProducts] = useState([]);
+  const [carts, setCarts] = useState([]);
   useEffect(() => {  
       const arr = shop.getProducts() 
-      Setproducts( arr );
+      setProducts( arr );
   })
 
 
   const addStockonRoodComp = (e) => {
-    console.log( 'addStockonRoodComp' )
-    console.log( e.target.value );
+    let row_id = e.target.value
+    const finditem = products.find((product) => {
+      return product.id == row_id
+    })  
+
+    const new_carts = carts.push( finditem )
+ 
+    console.log( carts )
   }
 
 
@@ -26,7 +33,7 @@ function App() {
     <div> 
         <h1> Shopping Cart </h1>
         <Products products={products} addStockRoot={addStockonRoodComp}/>
-        <Carts />
+        {/* <Carts carts={carts} /> */}
     </div>
   );
 }
