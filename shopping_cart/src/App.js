@@ -20,14 +20,17 @@ function App() {
   const addStockonRoodComp = (e) => {
     let row_id = e.target.value
     let cartArray = [...carts];
-
+    let productArray = [...products]
     var index = cartArray.findIndex(c => c.id == row_id)
-    console.log( index );
+    var pindex = productArray.findIndex(c => c.id == row_id) 
+    
     if( index >= 0 ){
       // update
       cartArray[index].number = cartArray[index].number + 1
-      setCarts(cartArray)
-
+      if( productArray[pindex].inventory != 0 ){
+        setCarts(cartArray) 
+        reduceProductInventory(productArray, pindex);
+      }      
     }else{
 
       const finditemOnProducts = products.find((product) => {
@@ -39,10 +42,15 @@ function App() {
       
       cartArray.push(finditemOnProducts)
       setCarts(cartArray)
-
+      reduceProductInventory(productArray, pindex);
     }
   }
- 
+  
+  const reduceProductInventory = (productArray, pindex) => {
+    productArray[pindex].inventory = productArray[pindex].inventory - 1
+    setProducts(productArray)
+  }
+
   return (
     <div> 
         <h1> Shopping Cart </h1>
