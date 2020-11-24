@@ -1,18 +1,18 @@
 import Cart from './Cart'
 
 function Carts( {carts} ) {
-  
-  console.log( carts.length );
+    
   return (
     <div> 
-        <h4>----------Carts area----------</h4>
-        { (carts.length >= 1) ? '' : <div>
-            { carts.map((cart) => (
-              <Cart />
+          {( !carts && carts.length == 0  ) ? 
+            <div> Loading </div> : <div>
+              carts list
+            { carts.map((cart, key) => (
+              <Cart key={key} title={cart.title}/>
             ))}
-          </div>
-        }
-    </div>
+            </div>
+          }
+      </div>
   );
 }
 

@@ -1,11 +1,9 @@
-function Cart() {
-    console.log('test')
+function Cart({title}) { 
     return (
       <div> 
-          Cart Item
+          {title}
       </div>
     );
   }
   
   export default Cart;
-  

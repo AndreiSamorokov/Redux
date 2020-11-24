@@ -1,4 +1,4 @@
-import logo from './logo.svg';
+ 
 import './App.css';
 
 import shop from './api/shop'
@@ -13,7 +13,7 @@ function App() {
   const [carts, setCarts] = useState([]);
   useEffect(() => {  
       const arr = shop.getProducts() 
-      setProducts( arr );
+      setProducts( arr ); 
   })
 
 
@@ -23,17 +23,17 @@ function App() {
       return product.id == row_id
     })  
 
-    const new_carts = carts.push( finditem )
- 
-    console.log( carts )
+
+    let cartArray = [...carts];
+      cartArray.push(finditem)
+      setCarts(cartArray)
   }
-
-
+ 
   return (
     <div> 
         <h1> Shopping Cart </h1>
         <Products products={products} addStockRoot={addStockonRoodComp}/>
-        {/* <Carts carts={carts} /> */}
+        <Carts carts={carts} />
     </div>
   );
 }
