@@ -4,11 +4,12 @@ function Carts( {carts} ) {
     
   return (
     <div> 
+        <hr />
           {( !carts && carts.length == 0  ) ? 
             <div> Loading </div> : <div>
-              carts list
+              <h4> Cart list</h4>
             { carts.map((cart, key) => (
-              <Cart key={key} title={cart.title}/>
+              <Cart key={key} title={cart.title} number={cart.number}/>
             ))}
             </div>
           }

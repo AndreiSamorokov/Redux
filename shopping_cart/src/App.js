@@ -19,14 +19,28 @@ function App() {
 
   const addStockonRoodComp = (e) => {
     let row_id = e.target.value
-    const finditem = products.find((product) => {
-      return product.id == row_id
-    })  
-
-
     let cartArray = [...carts];
-      cartArray.push(finditem)
+
+    var index = cartArray.findIndex(c => c.id == row_id)
+    console.log( index );
+    if( index >= 0 ){
+      // update
+      cartArray[index].number = cartArray[index].number + 1
       setCarts(cartArray)
+
+    }else{
+
+      const finditemOnProducts = products.find((product) => {
+        return product.id == row_id
+      })
+
+      // insert cart
+      finditemOnProducts['number'] = 1 
+      
+      cartArray.push(finditemOnProducts)
+      setCarts(cartArray)
+
+    }
   }
  
   return (
