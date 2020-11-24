@@ -6,4 +6,8 @@
 
 ## 3. Basic Todo with React
 
-## 4. Shooping cart without Redux -- working
+## 4. Shooping cart without Redux
+    
+    -- uncomfortable !!
+
+## 5. Shooping cart with Redux -- starting
