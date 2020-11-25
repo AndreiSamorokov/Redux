@@ -11,5 +11,8 @@
     -- uncomfortable !!
 
 ## 5. Shooping cart with Redux -- starting
+
+### redux sample app install
     -- npx create-react-app shopping_cart_redux --template redux
+### redux logger module need to install
     -- npm i redux-logger
