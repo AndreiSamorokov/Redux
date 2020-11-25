@@ -12,3 +12,4 @@
 
 ## 5. Shooping cart with Redux -- starting
     -- npx create-react-app shopping_cart_redux --template redux
+    -- npm i redux-logger
