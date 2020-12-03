@@ -7,6 +7,7 @@ class Option extends Component{
     render(){
         return(
             <div>
+                Your value will be calcuate by this value.
                 <input value={this.props.diff} onChange={this.onChange}/>
             </div>
         );
