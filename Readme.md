@@ -17,8 +17,8 @@
 ### redux logger module need to install
     -- npm i redux-logger
 
-## 6 Simple Counter pure
+## 6. Simple Counter pure
 
-## 7 Simple Counter with Redux 
+## 7. Simple Counter with Redux 
 
-## 8 Simple Counter with Redux + React-redux
+## 8. Simple Counter with Redux + React-redux
