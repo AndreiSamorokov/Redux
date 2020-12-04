@@ -9,8 +9,8 @@ const store = createStore(counterApp);
 
 const render=()=>{
   ReactDOM.render(
-    <APP store={store} />,
-    document.getElementById('rood')
+    <App store={store} />,
+    document.getElementById('root')
   )
 }
 

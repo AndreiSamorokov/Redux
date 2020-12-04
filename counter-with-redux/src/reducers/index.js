@@ -1,12 +1,12 @@
 import {INCREMENT, DECREMENT, SET_DIFF} from '../actions';
-import {combinReducers} from 'redux';
+import {combineReducers} from 'redux';
 
 const counterInitialState = {
-    value:0,
+    value: 0,
     diff: 1
 }
 
-const counter=(state=counterInitialState, action) => {
+const counter=(state=counterInitialState, action) => { 
     switch(action.type){
         case INCREMENT:
             return Object.assign({}, state,{
@@ -25,7 +25,7 @@ const counter=(state=counterInitialState, action) => {
     }
 }
 
-const counterApp = combinReducers({
+const counterApp = combineReducers({
     counter
 })
 

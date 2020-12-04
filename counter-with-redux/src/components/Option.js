@@ -1,7 +1,7 @@
 import React,{Component} from 'react';
 import {setDiff} from '../actions';
 
-class Option extends component{
+class Option extends Component{
     constructor(props){
         super(props);
 
@@ -15,7 +15,7 @@ class Option extends component{
     render(){
         return(
             <div>
-                <input value={this.props.store.setState().counter.diff} onChange={this.onChange}/>
+                <input value={this.props.store.getState().counter.diff} onChange={this.onChange} />
             </div>
         )
     }
